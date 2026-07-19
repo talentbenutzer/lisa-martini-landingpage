@@ -289,6 +289,50 @@ a {
   letter-spacing: 2px;
 }
 
+/* Contact Form */
+.contact-section {
+  padding: 120px 0;
+}
+
+.contact-form {
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--color-gold);
+}
+
+.contact-form select option {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+.w-100 {
+  width: 100%;
+}
+
 /* Footer */
 .main-footer {
   padding: 40px 0;
