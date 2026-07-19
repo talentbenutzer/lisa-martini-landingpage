@@ -34,12 +34,15 @@
   padding: 0;
 }
 
-html {
+html, body {
+  overflow-x: hidden;
+  width: 100%;
   scroll-behavior: smooth;
 }
 
 body {
   font-family: var(--font-body);
+  background-color: var(--color-light);
   color: var(--color-dark);
   line-height: 1.6;
   font-size: 16px;
@@ -395,8 +398,9 @@ a {
   .section h2 { font-size: 2rem; }
   
   .hero-section {
+    height: auto;
     min-height: auto;
-    padding: 160px 0 100px 0;
+    padding: 180px 0 100px 0;
   }
   
   .hero-content {
