@@ -391,16 +391,25 @@ a {
     padding: 0 20px;
   }
   
-  h1 { font-size: 2.5rem; }
-  .section h2 { font-size: 2.2rem; }
+  h1 { font-size: 2rem; }
+  .section h2 { font-size: 2rem; }
   
   .hero-section {
     min-height: auto;
-    padding: 120px 0 60px 0;
+    padding: 160px 0 100px 0;
   }
   
   .hero-content {
-    margin-top: 40px;
+    margin-top: 0;
+  }
+
+  .content-left, .content-right {
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
   }
 
   .button-group {
@@ -458,6 +467,16 @@ a {
   
   .contact-form {
     padding: 30px 20px;
+  }
+
+  .testimonials-wrapper {
+    flex-direction: column;
+    overflow: visible;
+  }
+
+  .testimonials-card {
+    width: 100%;
+    margin-right: 0;
   }
 
   .footer-content {
