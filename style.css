@@ -104,7 +104,8 @@ a {
   transition: color 0.3s ease;
 }
 
-.main-nav a:hover {
+.main-nav a:hover,
+.main-nav a.active {
   color: var(--color-pink);
 }
 
