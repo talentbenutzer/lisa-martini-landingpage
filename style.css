@@ -214,24 +214,18 @@ a {
   background-image: url('/assets/pics/0_hero.png');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed; /* Parallax effect */
 }
 
 .hero-content {
-  max-width: 600px;
+  max-width: 800px;
   color: var(--color-white);
-  margin-top: 100px;
+  text-align: left;
 }
 
 .hero-content h1 {
   font-size: 3.5rem;
   margin-bottom: 30px;
-}
-
-.hero-content p {
-  font-size: 1.1rem;
-  margin-bottom: 40px;
-  max-width: 500px;
-  text-wrap: pretty;
 }
 
 /* section typography */
@@ -545,5 +539,12 @@ a {
   .footer-links {
     flex-direction: column;
     gap: 15px;
+  }
+
+  /* Responsive Hero */
+  .hero-section {
+    background-image: url('/assets/pics/0_hero_respo.jpg');
+    background-attachment: scroll; /* Disable parallax on mobile */
+    min-height: 100vh;
   }
 }
