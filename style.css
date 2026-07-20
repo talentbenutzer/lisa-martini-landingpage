@@ -237,10 +237,6 @@ a {
   text-wrap: pretty;
 }
 
-.mobile-only {
-  display: none !important;
-}
-
 /* section typography */
 .section h2 {
   font-size: clamp(2rem, 5vw, 4rem);
@@ -580,13 +576,5 @@ a {
 
   .mobile-br {
     display: block;
-  }
-
-  .mobile-only {
-    display: block !important;
-  }
-
-  .desktop-only {
-    display: none !important;
   }
 }
