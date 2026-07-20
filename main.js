@@ -20,6 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Text Parallax Animation
+  const parallaxTexts = document.querySelectorAll('.parallax-text');
+  if (parallaxTexts.length > 0) {
+    window.addEventListener('scroll', () => {
+      let scrollY = window.scrollY;
+      parallaxTexts.forEach(el => {
+        el.style.transform = `translateY(${scrollY * -0.15}px)`;
+      });
+    }, { passive: true });
+  }
+
   // Testimonial Carousel Scroll
   const wrapper = document.querySelector('.testimonials-wrapper');
   const scrollBtn = document.querySelector('.scroll-right-btn');

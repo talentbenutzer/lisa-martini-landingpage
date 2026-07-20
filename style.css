@@ -547,4 +547,8 @@ a {
     background-attachment: scroll; /* Disable parallax on mobile */
     min-height: 100vh;
   }
+
+  .hero-content h1 {
+    font-size: 1.75rem;
+  }
 }
