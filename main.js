@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
-  // Testimonial Carousel Scroll
+  // Testimonial Carousel Scroll (Desktop)
   const wrapper = document.querySelector('.testimonials-wrapper');
   const scrollBtn = document.querySelector('.scroll-right-btn');
   
@@ -44,6 +44,22 @@ document.addEventListener('DOMContentLoaded', () => {
       if (wrapper.scrollLeft + wrapper.clientWidth >= wrapper.scrollWidth - 10) {
         wrapper.scrollTo({ left: 0, behavior: 'smooth' });
       }
+    });
+  }
+
+  // Load More Testimonials (Mobile)
+  const loadMoreBtn = document.getElementById('load-more-testimonials');
+  const testimonialsGrid = document.querySelector('.testimonials-grid');
+  
+  if (loadMoreBtn && testimonialsGrid) {
+    loadMoreBtn.addEventListener('click', () => {
+      testimonialsGrid.classList.add('show-all');
+      loadMoreBtn.style.display = 'none';
+      
+      // Trigger intersection observer for newly revealed items
+      setTimeout(() => {
+        window.dispatchEvent(new Event('scroll'));
+      }, 100);
     });
   }
 

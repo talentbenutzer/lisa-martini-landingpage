@@ -543,9 +543,13 @@ a {
 
   .testimonials-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
     transform: none !important;
+  }
+
+  .testimonials-grid:not(.show-all) .testimonial-card:nth-child(n+3) {
+    display: none;
   }
 
   .testimonial-card {
