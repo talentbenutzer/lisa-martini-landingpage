@@ -226,10 +226,19 @@ a {
 .hero-content h1 {
   font-size: 3.5rem;
   margin-bottom: 30px;
-}
-
 .mobile-br {
   display: none;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  max-width: 500px;
+  text-wrap: pretty;
+}
+
+.mobile-only {
+  display: none !important;
 }
 
 /* section typography */
@@ -571,5 +580,13 @@ a {
 
   .mobile-br {
     display: block;
+  }
+
+  .mobile-only {
+    display: block !important;
+  }
+
+  .desktop-only {
+    display: none !important;
   }
 }
