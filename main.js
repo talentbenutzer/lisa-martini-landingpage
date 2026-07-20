@@ -1,21 +1,38 @@
 import './style.css'
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Scroll Blur Animation for Texts
+  const textElements = document.querySelectorAll('h1, h2, p, .accent-title, h3, h4, .btn');
+  
+  if (textElements.length > 0) {
+    const blurObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          blurObserver.unobserve(entry.target); // Animate only once
+        }
+      });
+    }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+    textElements.forEach(el => {
+      el.classList.add('blur-animate');
+      blurObserver.observe(el);
+    });
+  }
+
   // Testimonial Carousel Scroll
   const wrapper = document.querySelector('.testimonials-wrapper');
+  const scrollBtn = document.querySelector('.scroll-right-btn');
   
-  if (wrapper) {
-    let scrollInterval;
-    
-    wrapper.addEventListener('mouseenter', () => {
-      scrollInterval = setInterval(() => {
-        wrapper.scrollBy({ left: 1.5, behavior: 'auto' });
-      }, 16);
-    });
-    
-    wrapper.addEventListener('mouseleave', () => {
-      clearInterval(scrollInterval);
-      wrapper.scrollTo({ left: 0, behavior: 'smooth' });
+  if (wrapper && scrollBtn) {
+    scrollBtn.addEventListener('click', () => {
+      const cardWidth = wrapper.clientWidth / 3;
+      wrapper.scrollBy({ left: cardWidth + 30, behavior: 'smooth' });
+      
+      // If we've reached the end, scroll back to start
+      if (wrapper.scrollLeft + wrapper.clientWidth >= wrapper.scrollWidth - 10) {
+        wrapper.scrollTo({ left: 0, behavior: 'smooth' });
+      }
     });
   }
 
