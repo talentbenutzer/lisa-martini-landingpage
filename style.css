@@ -228,6 +228,10 @@ a {
   margin-bottom: 30px;
 }
 
+.mobile-br {
+  display: none;
+}
+
 /* section typography */
 .section h2 {
   font-size: clamp(2rem, 5vw, 4rem);
@@ -546,9 +550,19 @@ a {
     background-image: url('/assets/pics/0_hero_respo.jpg');
     background-attachment: scroll; /* Disable parallax on mobile */
     min-height: 100vh;
+    align-items: flex-end;
+  }
+
+  .hero-content {
+    padding-bottom: 60px;
+    width: 100%;
   }
 
   .hero-content h1 {
     font-size: 1.75rem;
+  }
+
+  .mobile-br {
+    display: block;
   }
 }
