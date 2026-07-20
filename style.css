@@ -264,7 +264,6 @@ a {
   background-image: url('/assets/pics/BG.png');
   background-size: cover;
   background-position: center;
-  padding: 120px 0;
   position: relative;
 }
 
@@ -318,7 +317,6 @@ a {
 
 /* Contact Form */
 .contact-section {
-  padding: 120px 0;
 }
 
 .contact-form {
@@ -428,7 +426,7 @@ a {
   .section h2 { font-size: 3rem; }
   
   .section {
-    padding: 80px 0;
+    padding: 100px 0;
   }
   
   .gold-separator h2 {
@@ -517,7 +515,6 @@ a {
   }
   
   .contact-section {
-    padding: 80px 0;
   }
   
   .contact-form {
@@ -525,13 +522,23 @@ a {
   }
 
   .testimonials-wrapper {
-    flex-direction: column;
     overflow: visible;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    transform: none !important;
   }
 
   .testimonial-card {
     width: 100%;
-    margin-right: 0;
+    margin: 0;
+  }
+
+  .scroll-right-btn {
+    display: none;
   }
 
   .footer-content {
