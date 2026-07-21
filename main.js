@@ -2,7 +2,7 @@ import './style.css'
 
 document.addEventListener('DOMContentLoaded', () => {
   // Scroll Blur Animation for Texts
-  const textElements = document.querySelectorAll('h1, h2, p, .accent-title, h3, h4, .btn');
+  const textElements = document.querySelectorAll('h1, h2, p, .accent-title, h3, h4, .btn, .testimonial-card');
   
   if (textElements.length > 0) {
     const blurObserver = new IntersectionObserver((entries) => {
