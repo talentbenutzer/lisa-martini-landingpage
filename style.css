@@ -525,19 +525,20 @@ a {
   .main-nav {
     position: fixed;
     top: 0;
-    right: -100%;
+    right: 0;
+    transform: translateX(100%);
     width: 80%;
     max-width: 300px;
     height: 100vh;
     background-color: rgba(18, 22, 18, 0.98);
     padding: 100px 40px 40px 40px;
-    transition: right 0.3s ease;
+    transition: transform 0.3s ease;
     z-index: 1000;
     box-shadow: -5px 0 15px rgba(0,0,0,0.5);
   }
   
   .main-nav.open {
-    right: 0;
+    transform: translateX(0);
   }
 
   .main-nav ul {
