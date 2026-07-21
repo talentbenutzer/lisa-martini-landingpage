@@ -444,6 +444,10 @@ a {
   display: none;
 }
 
+.nav-clip {
+  display: contents;
+}
+
 /* Responsive Design */
 @media (max-width: 991px) {
   .section-split, .section-split.reverse {
@@ -522,8 +526,17 @@ a {
     padding: 5px;
   }
 
-  .main-nav {
+  .nav-clip {
+    display: block;
     position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1000;
+  }
+
+  .main-nav {
+    position: absolute;
     top: 0;
     right: 0;
     transform: translateX(100%);
@@ -533,7 +546,7 @@ a {
     background-color: rgba(18, 22, 18, 0.98);
     padding: 100px 40px 40px 40px;
     transition: transform 0.3s ease;
-    z-index: 1000;
+    pointer-events: auto;
     box-shadow: -5px 0 15px rgba(0,0,0,0.5);
   }
   
