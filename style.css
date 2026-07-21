@@ -283,14 +283,23 @@ a {
   position: relative;
 }
 
+.testimonials-carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
 .testimonials-wrapper {
   overflow: hidden;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  flex: 1;
   white-space: nowrap;
   padding: 10px 0;
 }
 
 .testimonials-grid {
-  display: inline-flex;
+  display: flex;
   gap: 30px;
   transition: transform 0.5s ease;
 }
@@ -537,8 +546,14 @@ a {
     padding: 30px 20px;
   }
 
+  .testimonials-carousel-container {
+    display: block;
+  }
+
   .testimonials-wrapper {
+    display: block;
     overflow: visible;
+    white-space: normal;
   }
 
   .testimonials-grid {
